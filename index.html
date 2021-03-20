@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-
 <body>
     <header class="header">
         <div class="container">
@@ -52,7 +54,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="section">
@@ -109,16 +111,25 @@
                 <h2 class="title">Чем мы занимаемся</h2>
                 <ul class="about-list list">
                     <li class="about-list-item">
-                        <img src="./images/about/img.png" alt="Сотрудник работает за компьютером" width="370"
+                          <img src="./images/about/img.png" alt="Сотрудник работает за компьютером" width="370"
                             height="294">
+                        <div class="about-list-wrapper">    
+                          <p class="about-text-background">Десктопные приложения</p>
+                        </div>    
                     </li>
                     <li class="about-list-item">
-                        <img src="./images/about/img-1.png" alt="Сотрудник работает за компьютером" width="370"
+                          <img src="./images/about/img-1.png" alt="Сотрудник работает за компьютером" width="370"
                             height="294">
+                        <div class="about-list-wrapper">    
+                          <p class="about-text-background">Мобильные приложения</p>
+                        </div>    
                     </li>
                     <li class="about-list-item">
-                        <img src="./images/about/img-2.png" alt="Сотрудник работает за компьютером" width="370"
+                         <img src="./images/about/img-2.png" alt="Сотрудник работает за компьютером" width="370"
                             height="294">
+                            <div class="about-list-wrapper">
+                              <p class="about-text-background">Дизайнерские решения</p>
+                            </div>    
                     </li>
                 </ul>
             </div>
@@ -398,14 +409,15 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close-btn">
-                <svg>
-                    <use href="./images/close-black.svg"></use> 
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="social-list-icon">
+                    <use href="./images/icons.svg#close-black"></use>
                 </svg>
             </button>
         </div>
     </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
